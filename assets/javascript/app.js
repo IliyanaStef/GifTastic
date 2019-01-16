@@ -24,7 +24,7 @@ $("#submitButton").on("click", function(event) {
 	event.preventDefault();
 	var newAnimal = $("#userInput").val().trim();
 		//Prevents animals buttons being duplicated
-        if (newAnimal != "" && !animals.includes(newAnimal.toLowerCase())){
+        if (animals.indexOf(newAnimal) === -1) {
             animals.push(newAnimal);
 			renderButtons();
         }
